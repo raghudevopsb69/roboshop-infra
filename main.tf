@@ -61,7 +61,8 @@ resource "null_resource" "ansible-apply" {
       password = "DevOps321"
     }
     inline = [
-      "echo Hello"
+      "labauto ansible",
+      "ansible-pull -i localhost, -U https://github.com/raghudevopsb69/roboshop-ansible roboshop.yml -e ROLE_NAME=${element(var.instances, count.index)} -e ENV=${var.ENV}"
     ]
   }
 }
