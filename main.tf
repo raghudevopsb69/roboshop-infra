@@ -53,6 +53,9 @@ resource "aws_route53_record" "dns-record" {
 }
 
 resource "null_resource" "ansible-apply" {
+  triggers = {
+    abc = timestamp()
+  }
   count = length(var.instances)
   provisioner "remote-exec" {
     connection {
