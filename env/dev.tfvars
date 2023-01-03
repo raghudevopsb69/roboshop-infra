@@ -9,9 +9,11 @@ default_vpc_route_table = "rtb-06dc24aa66c02de3b"
 
 vpc = {
   dev = {
-    vpc_cidr_block            = "10.0.0.0/16"
-    public_subnet_cidr_block  = ["10.0.0.0/24", "10.0.1.0/24"]
-    private_subnet_cidr_block = ["10.0.2.0/24", "10.0.3.0/24"]
-    subnet_azs                = ["us-east-1a", "us-east-1b"]
+    vpc_cidr_block           = "10.0.0.0/16"
+    public_subnet_cidr_block = ["10.0.0.0/24", "10.0.1.0/24"]
+    app_subnet_cidr_block    = ["10.0.2.0/24", "10.0.3.0/24"]
+    db_subnet_cidr_block     = ["10.0.4.0/24", "10.0.5.0/24"]
+    subnet_azs               = ["us-east-1a", "us-east-1b"]
   }
 }
+
