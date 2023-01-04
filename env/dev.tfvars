@@ -17,3 +17,8 @@ vpc = {
   }
 }
 
+docdb = {
+  dev = {
+    engine = "docdb"
+  }
+}
