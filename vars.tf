@@ -5,3 +5,4 @@ variable "default_vpc_route_table" {}
 
 variable "vpc" {}
 variable "docdb" {}
+variable "kms_key_id" {}
