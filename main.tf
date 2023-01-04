@@ -13,3 +13,19 @@ module "vpc" {
   subnet_azs               = each.value.subnet_azs
 }
 
+//module "docdb" {
+//  source = "github.com/raghudevopsb69/tf-module-docdb"
+//  env                     = var.env
+//
+//  for_each                 = var.docdb
+//  engine = each.value.engine
+//  backup_retention_period = each.value.backup_retention_period
+//  preferred_backup_window = each.value.preferred_backup_window
+//  skip_final_snapshot = each.value.skip_final_snapshot
+//
+//
+//}
+
+output "vpc" {
+  value = module.vpc
+}
