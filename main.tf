@@ -4,6 +4,7 @@ module "vpc" {
   default_vpc_id          = var.default_vpc_id
   default_vpc_cidr_block  = var.default_vpc_cidr_block
   default_vpc_route_table = var.default_vpc_route_table
+  workstation_ip          = var.workstation_ip
 
   for_each                 = var.vpc
   vpc_cidr_block           = each.value.vpc_cidr_block
