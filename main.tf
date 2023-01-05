@@ -44,6 +44,8 @@ module "rds" {
   storage_encrypted       = each.value.storage_encrypted
   engine_version          = each.value.engine_version
   dbname                  = each.value.dbname
+  instance_count          = each.value.instance_count
+  instance_class          = each.value.instance_class
 
   vpc = module.vpc
 }
