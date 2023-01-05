@@ -36,8 +36,8 @@ docdb = {
 
 rds = {
   dev = {
-    engine                  = "aurora-mysql"
-    engine_version          = "5.7.mysql_aurora.2.11.0"
+    engine                  = "mysql"
+    engine_version          = "5.7.40"
     dbname                  = "dummy"
     skip_final_snapshot     = true
     backup_retention_period = 1
