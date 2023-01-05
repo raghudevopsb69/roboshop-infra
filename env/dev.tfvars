@@ -47,3 +47,12 @@ rds = {
     instance_class          = "db.t3.small"
   }
 }
+
+elasticache = {
+  dev = {
+    engine          = "redis"
+    engine_version  = "6.x"
+    num_cache_nodes = 1
+    instance_class  = "cache.t3.micro"
+  }
+}
