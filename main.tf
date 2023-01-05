@@ -51,18 +51,18 @@ module "rds" {
 }
 
 
-module "elasticache" {
-  source     = "github.com/raghudevopsb69/tf-module-elasticache"
-  env        = var.env
-  kms_key_id = var.kms_key_id
-
-  for_each        = var.rds
-  engine          = each.value.engine
-  engine_version  = each.value.engine_version
-  num_cache_nodes = each.value.num_cache_nodes
-  instance_class  = each.value.instance_class
-
-  vpc = module.vpc
-}
+//module "elasticache" {
+//  source     = "github.com/raghudevopsb69/tf-module-elasticache"
+//  env        = var.env
+//  kms_key_id = var.kms_key_id
+//
+//  for_each        = var.rds
+//  engine          = each.value.engine
+//  engine_version  = each.value.engine_version
+//  num_cache_nodes = each.value.num_cache_nodes
+//  instance_class  = each.value.instance_class
+//
+//  vpc = module.vpc
+//}
 
 
