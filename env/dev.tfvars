@@ -53,6 +53,6 @@ elasticache = {
     engine          = "redis"
     engine_version  = "6.x"
     num_cache_nodes = 1
-    instance_class  = "cache.t3.micro"
+    node_type       = "cache.t3.micro"
   }
 }
