@@ -67,7 +67,7 @@ rabbitmq = {
 
 app = {
   catalogue = {
-    name           = "catalogue"
+    component      = "catalogue"
     instance_type  = "t3.micro"
     instance_count = 1
   }

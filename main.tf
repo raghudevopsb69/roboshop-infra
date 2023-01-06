@@ -76,3 +76,16 @@ module "rabbitmq" {
   vpc = module.vpc
 }
 
+module "app" {
+  source         = "github.com/raghudevopsb69/tf-module-mutable-app"
+  env            = var.env
+  allow_ssh_cidr = var.allow_ssh_cidr
+
+  for_each       = var.app
+  instance_type  = each.value.instance_type
+  instance_count = each.value.instance_count
+  comoinent      = each.value.component
+
+  vpc = module.vpc
+}
+
