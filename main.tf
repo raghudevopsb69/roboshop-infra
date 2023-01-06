@@ -84,7 +84,7 @@ module "app" {
   for_each       = var.app
   instance_type  = each.value.instance_type
   instance_count = each.value.instance_count
-  comoinent      = each.value.component
+  component      = each.value.component
 
   vpc = module.vpc
 }
