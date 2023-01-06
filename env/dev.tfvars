@@ -57,3 +57,9 @@ elasticache = {
     az_mode         = "single-az"
   }
 }
+
+rabbitmq = {
+  dev = {
+    instance_type = "t3.micro"
+  }
+}

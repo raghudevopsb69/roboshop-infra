@@ -66,3 +66,13 @@ module "elasticache" {
 }
 
 
+module "rabbitmq" {
+  source = "github.com/raghudevopsb69/tf-module-rabbitmq"
+  env    = var.env
+
+  for_each      = var.rabbitmq
+  instance_type = each.value.instance_type
+
+  vpc = module.vpc
+}
+
