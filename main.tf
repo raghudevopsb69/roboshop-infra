@@ -55,7 +55,7 @@ module "elasticache" {
   source = "github.com/raghudevopsb69/tf-module-elasticache"
   env    = var.env
 
-  for_each        = var.rds
+  for_each        = var.elasticache
   engine          = each.value.engine
   engine_version  = each.value.engine_version
   num_cache_nodes = each.value.num_cache_nodes
