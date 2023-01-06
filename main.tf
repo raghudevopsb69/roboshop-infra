@@ -52,9 +52,8 @@ module "rds" {
 
 
 module "elasticache" {
-  source     = "github.com/raghudevopsb69/tf-module-elasticache"
-  env        = var.env
-  kms_key_id = var.kms_key_id
+  source = "github.com/raghudevopsb69/tf-module-elasticache"
+  env    = var.env
 
   for_each        = var.rds
   engine          = each.value.engine
