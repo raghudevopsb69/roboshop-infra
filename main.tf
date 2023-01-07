@@ -81,10 +81,13 @@ module "app" {
   env            = var.env
   allow_ssh_cidr = var.allow_ssh_cidr
 
-  for_each       = var.app
-  instance_type  = each.value.instance_type
-  instance_count = each.value.instance_count
-  component      = each.value.component
+  for_each         = var.app
+  instance_type    = each.value.instance_type
+  instance_count   = each.value.instance_count
+  component        = each.value.component
+  desired_capacity = each.value.desired_capacity
+  max_size         = each.value.max_size
+  min_size         = each.value.min_size
 
   vpc = module.vpc
 }
