@@ -83,7 +83,6 @@ module "app" {
 
   for_each         = var.app
   instance_type    = each.value.instance_type
-  instance_count   = each.value.instance_count
   component        = each.value.component
   desired_capacity = each.value.desired_capacity
   max_size         = each.value.max_size
