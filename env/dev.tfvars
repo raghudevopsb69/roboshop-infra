@@ -72,6 +72,7 @@ app = {
     desired_capacity = 1
     max_size         = 1
     min_size         = 1
+    app_port         = 8080
   }
   frontend = {
     component        = "frontend"
@@ -79,6 +80,7 @@ app = {
     desired_capacity = 1
     max_size         = 1
     min_size         = 1
+    app_port         = 80
   }
 }
 
