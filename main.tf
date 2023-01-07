@@ -91,3 +91,15 @@ module "app" {
   vpc = module.vpc
 }
 
+
+module "alb" {
+  source = "github.com/raghudevopsb69/tf-module-alb"
+  env    = var.env
+
+  for_each = var.alb
+  name     = each.value.name
+  internal = each.value.internal
+
+  vpc = module.vpc
+}
+

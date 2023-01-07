@@ -12,3 +12,4 @@ variable "elasticache" {}
 variable "rabbitmq" {}
 variable "allow_ssh_cidr" {}
 variable "app" {}
+variable "alb" {}

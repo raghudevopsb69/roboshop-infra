@@ -82,3 +82,9 @@ app = {
   }
 }
 
+alb = {
+  public = {
+    name     = "public-alb"
+    internal = false
+  }
+}
