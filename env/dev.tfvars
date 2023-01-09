@@ -89,4 +89,8 @@ alb = {
     name     = "public-alb"
     internal = false
   }
+  private = {
+    name     = "private-alb"
+    internal = true
+  }
 }
