@@ -109,3 +109,7 @@ output "alb" {
   value = module.alb
 }
 
+//output "lb_arn" {
+//  value = { for k, v in module.alb : k => v.arn }
+//}
+
