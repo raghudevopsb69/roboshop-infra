@@ -75,6 +75,7 @@ app = {
     max_size         = 1
     min_size         = 1
     app_port         = 8080
+    lb_rule_priority = 101
   }
   frontend = {
     component        = "frontend"
@@ -83,18 +84,19 @@ app = {
     max_size         = 1
     min_size         = 1
     app_port         = 80
+    lb_rule_priority = 100
   }
 }
 
 alb = {
   public = {
-    name             = "public-alb"
-    internal         = false
-    lb_rule_priority = 100
+    name     = "public-alb"
+    internal = false
+
   }
   private = {
-    name             = "private-alb"
-    internal         = true
-    lb_rule_priority = 101
+    name     = "private-alb"
+    internal = true
+
   }
 }
