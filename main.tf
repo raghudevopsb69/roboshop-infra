@@ -88,6 +88,7 @@ module "app" {
   max_size         = each.value.max_size
   min_size         = each.value.min_size
   app_port         = each.value.app_port
+  lb_rule_priority = each.value.lb_rule_priority
 
   vpc            = module.vpc
   load_balancers = module.alb

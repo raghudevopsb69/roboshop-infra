@@ -86,11 +86,13 @@ app = {
 
 alb = {
   public = {
-    name     = "public-alb"
-    internal = false
+    name             = "public-alb"
+    internal         = false
+    lb_rule_priority = 100
   }
   private = {
-    name     = "private-alb"
-    internal = true
+    name             = "private-alb"
+    internal         = true
+    lb_rule_priority = 101
   }
 }
