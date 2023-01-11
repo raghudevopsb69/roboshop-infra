@@ -89,7 +89,8 @@ module "app" {
   min_size         = each.value.min_size
   app_port         = each.value.app_port
 
-  vpc = module.vpc
+  vpc            = module.vpc
+  load_balancers = module.alb
 }
 
 
