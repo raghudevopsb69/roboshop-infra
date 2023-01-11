@@ -10,6 +10,8 @@ allow_ssh_cidr          = ["172.31.1.61/32"]
 ## KMS Information
 kms_key_id = "arn:aws:kms:us-east-1:739561048503:key/09ef6567-23e3-4af8-a33a-22915a89274d"
 
+## Route53 Info
+domain = "devopsb69.online"
 
 ## VPC
 

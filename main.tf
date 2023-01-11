@@ -80,6 +80,7 @@ module "app" {
   source         = "github.com/raghudevopsb69/tf-module-mutable-app"
   env            = var.env
   allow_ssh_cidr = var.allow_ssh_cidr
+  domain         = var.domain
 
   for_each         = var.app
   instance_type    = each.value.instance_type
