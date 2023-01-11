@@ -77,6 +77,42 @@ app = {
     app_port         = 8080
     lb_rule_priority = 101
   }
+  user = {
+    component        = "user"
+    instance_type    = "t3.micro"
+    desired_capacity = 1
+    max_size         = 1
+    min_size         = 1
+    app_port         = 8080
+    lb_rule_priority = 102
+  }
+  cart = {
+    component        = "cart"
+    instance_type    = "t3.micro"
+    desired_capacity = 1
+    max_size         = 1
+    min_size         = 1
+    app_port         = 8080
+    lb_rule_priority = 103
+  }
+  shipping = {
+    component        = "shipping"
+    instance_type    = "t3.micro"
+    desired_capacity = 1
+    max_size         = 1
+    min_size         = 1
+    app_port         = 8080
+    lb_rule_priority = 104
+  }
+  payment = {
+    component        = "payment"
+    instance_type    = "t3.micro"
+    desired_capacity = 1
+    max_size         = 1
+    min_size         = 1
+    app_port         = 8080
+    lb_rule_priority = 105
+  }
   frontend = {
     component        = "frontend"
     instance_type    = "t3.micro"
