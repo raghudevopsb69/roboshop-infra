@@ -105,3 +105,7 @@ module "alb" {
   vpc = module.vpc
 }
 
+output "alb" {
+  value = module.alb
+}
+
