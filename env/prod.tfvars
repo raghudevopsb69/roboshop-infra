@@ -98,7 +98,7 @@ app = {
   }
   shipping = {
     component        = "shipping"
-    instance_type    = "t3.micro"
+    instance_type    = "t3.medium"
     desired_capacity = 2
     max_size         = 4
     min_size         = 2
