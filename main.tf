@@ -78,11 +78,12 @@ module "rabbitmq" {
 }
 
 module "app" {
-  depends_on     = [module.docdb, module.rds, module.rabbitmq, module.elasticache]
-  source         = "github.com/raghudevopsb69/tf-module-mutable-app"
-  env            = var.env
-  allow_ssh_cidr = var.allow_ssh_cidr
-  domain         = var.domain
+  depends_on         = [module.docdb, module.rds, module.rabbitmq, module.elasticache]
+  source             = "github.com/raghudevopsb69/tf-module-mutable-app"
+  env                = var.env
+  allow_ssh_cidr     = var.allow_ssh_cidr
+  allow_monitor_cidr = var.allow_monitor_cidr
+  domain             = var.domain
 
   for_each         = var.app
   instance_type    = each.value.instance_type
