@@ -99,9 +99,9 @@ app = {
   shipping = {
     component        = "shipping"
     instance_type    = "t3.medium"
-    desired_capacity = 2
+    desired_capacity = 3
     max_size         = 4
-    min_size         = 2
+    min_size         = 3
     app_port         = 8080
     lb_rule_priority = 104
   }
