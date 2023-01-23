@@ -15,3 +15,4 @@ variable "app" {}
 variable "alb" {}
 variable "domain" {}
 variable "allow_monitor_cidr" {}
+variable "acm_cert_arn" {}
