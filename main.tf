@@ -121,6 +121,6 @@ module "eks" {
   DESIRED_SIZE            = 1
   MAX_SIZE                = 1
   MIN_SIZE                = 1
-  CREATE_EXTERNAL_SECRETS = false
+  CREATE_EXTERNAL_SECRETS = true
 }
 
