@@ -114,12 +114,13 @@ module "rabbitmq" {
 //}
 
 module "eks" {
-  source             = "github.com/r-devops/tf-module-eks"
-  ENV                = var.env
-  PRIVATE_SUBNET_IDS = lookup(lookup(module.vpc, var.env, null), "app_subnets_ids", null)
-  PUBLIC_SUBNET_IDS  = lookup(lookup(module.vpc, var.env, null), "public_subnets_ids", null)
-  DESIRED_SIZE       = 1
-  MAX_SIZE           = 1
-  MIN_SIZE           = 1
+  source                  = "github.com/r-devops/tf-module-eks"
+  ENV                     = var.env
+  PRIVATE_SUBNET_IDS      = lookup(lookup(module.vpc, var.env, null), "app_subnets_ids", null)
+  PUBLIC_SUBNET_IDS       = lookup(lookup(module.vpc, var.env, null), "public_subnets_ids", null)
+  DESIRED_SIZE            = 1
+  MAX_SIZE                = 1
+  MIN_SIZE                = 1
+  CREATE_EXTERNAL_SECRETS = true
 }
 
