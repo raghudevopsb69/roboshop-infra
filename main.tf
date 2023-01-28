@@ -122,5 +122,6 @@ module "eks" {
   MAX_SIZE                = 1
   MIN_SIZE                = 1
   CREATE_EXTERNAL_SECRETS = true
+  INSTALL_KUBE_METRICS    = true
 }
 
