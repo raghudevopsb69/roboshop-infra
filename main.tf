@@ -118,9 +118,9 @@ module "eks" {
   ENV                     = var.env
   PRIVATE_SUBNET_IDS      = lookup(lookup(module.vpc, var.env, null), "app_subnets_ids", null)
   PUBLIC_SUBNET_IDS       = lookup(lookup(module.vpc, var.env, null), "public_subnets_ids", null)
-  DESIRED_SIZE            = 1
-  MAX_SIZE                = 1
-  MIN_SIZE                = 1
+  DESIRED_SIZE            = 2
+  MAX_SIZE                = 2
+  MIN_SIZE                = 2
   CREATE_EXTERNAL_SECRETS = true
   INSTALL_KUBE_METRICS    = true
 }
